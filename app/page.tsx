@@ -91,7 +91,7 @@ export default function Page() {
   return (
     <main className="bg-[#F5F4F0] text-[#0E1216]">
       <nav
-        className={`${shell} relative z-10 flex h-[72px] items-center justify-between border-b border-[#0e1216]/15 md:h-[86px]`}
+        className={`${shell} relative z-10 flex h-[67px] items-center justify-between border-b border-[#0e1216]/15 md:h-[70px]`}
         aria-label="Primary navigation"
       >
         <a
@@ -114,25 +114,25 @@ export default function Page() {
       </nav>
 <section
   id="top"
-  className="relative overflow-hidden bg-[#0E1216] text-[#F5F4F0]"
+  className="relative overflow-hidden bg-[#F5F4F0] text-[#0E1216]"
 >
   <div
     className={`${shell} relative flex min-h-[calc(100svh-72px)] flex-col justify-between overflow-hidden py-10 md:min-h-[calc(100svh-86px)]`}
   >
-    {/* Structural grid lines, inverted for dark ground */}
+    {/* Structural grid lines */}
     <div
       className="pointer-events-none absolute inset-0 grid grid-cols-2 md:grid-cols-4"
       aria-hidden="true"
     >
       {[1, 2, 3, 4].map((i) => (
-        <i key={i} className="border-r border-white/[.06]" />
+        <i key={i} className="border-r border-[#0e1216]/[.08]" />
       ))}
     </div>
 
     {/* Giant outline numeral, dramatic scale, bleeds off the edge */}
     <span
       aria-hidden="true"
-      className="pointer-events-none absolute -right-[4vw] -top-[6vh] select-none text-[clamp(220px,32vw,480px)] font-medium leading-none tracking-[-.06em] text-transparent [-webkit-text-stroke:1px_rgba(245,244,240,0.08)]"
+      className="pointer-events-none absolute -right-[4vw] -top-[6vh] select-none text-[clamp(220px,32vw,480px)] font-medium leading-none tracking-[-.06em] text-transparent [-webkit-text-stroke:1px_rgba(14,18,22,0.08)]"
     >
       01
     </span>
@@ -155,7 +155,7 @@ export default function Page() {
         </span>
       </h1>
 
-      <p className="mt-10 max-w-md text-base leading-[1.6] text-[#8E98A3] md:mt-12">
+      <p className="mt-10 max-w-md text-base leading-[1.6] text-[#39424C] md:mt-12">
         One system connecting developers, managers, operators, and
         residents — instead of six disconnected tools.
       </p>
@@ -163,7 +163,7 @@ export default function Page() {
       <div className="mt-9 flex items-center gap-5">
         <a
           href="#ecosystem"
-          className="group inline-flex items-center gap-2 rounded-full bg-[#00B383] px-7 py-3.5 text-[11px] font-bold uppercase tracking-[.14em] text-[#0E1216] transition-colors hover:bg-[#F5F4F0]"
+          className="group inline-flex items-center gap-2 rounded-full bg-[#0E1216] px-7 py-3.5 text-[11px] font-bold uppercase tracking-[.14em] text-[#F5F4F0] transition-colors hover:bg-[#00B383]"
         >
           Explore the ecosystem
           <span className="transition-transform group-hover:translate-y-0.5">↓</span>
@@ -172,7 +172,7 @@ export default function Page() {
     </div>
 
     {/* Marquee strip — the four roles in constant motion, bottom edge */}
-    <div className="relative z-[1] mt-10 overflow-hidden border-t border-white/10 py-5">
+    <div className="relative z-[1] mt-10 overflow-hidden border-t border-[#0e1216]/10 py-5">
       <div className="flex w-max animate-[pilot-marquee_22s_linear_infinite] items-center gap-10 whitespace-nowrap">
         {Array.from({ length: 2 }).map((_, rep) => (
           <div key={rep} className="flex items-center gap-10">

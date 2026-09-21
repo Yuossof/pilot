@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme inline {
+  --color-ink: #0e1216;
+  --color-graphite: #39424c;
+  --color-mist: #8e98a3;
+  --color-line: #d9d8d2;
+  --color-paper: #f5f4f0;
+  --color-signal: #00b383;
+}
+

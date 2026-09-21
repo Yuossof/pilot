@@ -112,123 +112,92 @@ export default function Page() {
           Talk to Pilot 
         </a>
       </nav>
-      <section
-        id="top"
-        className={`${shell} relative flex min-h-[calc(100svh-72px)] flex-col justify-between overflow-hidden py-10 md:min-h-[calc(100svh-86px)]`}
-      >
-        {/* Structural grid lines */}
-        <div
-          className="pointer-events-none absolute inset-0 grid grid-cols-2 md:grid-cols-4"
-          aria-hidden="true"
+<section
+  id="top"
+  className="relative overflow-hidden bg-[#0E1216] text-[#F5F4F0]"
+>
+  <div
+    className={`${shell} relative flex min-h-[calc(100svh-72px)] flex-col justify-between overflow-hidden py-10 md:min-h-[calc(100svh-86px)]`}
+  >
+    {/* Structural grid lines, inverted for dark ground */}
+    <div
+      className="pointer-events-none absolute inset-0 grid grid-cols-2 md:grid-cols-4"
+      aria-hidden="true"
+    >
+      {[1, 2, 3, 4].map((i) => (
+        <i key={i} className="border-r border-white/[.06]" />
+      ))}
+    </div>
+
+    {/* Giant outline numeral, dramatic scale, bleeds off the edge */}
+    <span
+      aria-hidden="true"
+      className="pointer-events-none absolute -right-[4vw] -top-[6vh] select-none text-[clamp(220px,32vw,480px)] font-medium leading-none tracking-[-.06em] text-transparent [-webkit-text-stroke:1px_rgba(245,244,240,0.08)]"
+    >
+      01
+    </span>
+
+    <div className="relative z-[1] flex flex-1 flex-col justify-center py-[10vh] md:py-0">
+      <div className="mb-8 flex items-center gap-3">
+        <span className="h-px w-8 bg-[#00B383]" />
+        <span className="text-[11px] font-bold tracking-[.2em] text-[#00B383]">
+          01 // PILOT
+        </span>
+      </div>
+
+      <h1 className="max-w-[1200px] text-[clamp(56px,10vw,160px)] font-medium leading-[.86] tracking-[-.055em]">
+        Digital
+        <br />
+        infra&shy;structure
+        <br />
+        <span className="relative inline-block text-transparent [-webkit-text-stroke:1.5px_#00B383]">
+          for operations.
+        </span>
+      </h1>
+
+      <p className="mt-10 max-w-md text-base leading-[1.6] text-[#8E98A3] md:mt-12">
+        One system connecting developers, managers, operators, and
+        residents — instead of six disconnected tools.
+      </p>
+
+      <div className="mt-9 flex items-center gap-5">
+        <a
+          href="#ecosystem"
+          className="group inline-flex items-center gap-2 rounded-full bg-[#00B383] px-7 py-3.5 text-[11px] font-bold uppercase tracking-[.14em] text-[#0E1216] transition-colors hover:bg-[#F5F4F0]"
         >
-          {[1, 2, 3, 4].map((i) => (
-            <i key={i} className="border-r border-[#0e1216]/[.08]" />
-          ))}
-        </div>
+          Explore the ecosystem
+          <span className="transition-transform group-hover:translate-y-0.5">↓</span>
+        </a>
+      </div>
+    </div>
 
-        <div className="relative z-[1] grid flex-1 grid-cols-1 items-center gap-10 py-[10vh] md:grid-cols-[1.15fr_.85fr] md:gap-6 md:py-0">
-          {/* Left: copy */}
-          <div className="flex flex-col items-center text-center md:items-start md:text-left">
-            <div className="mb-7 flex items-center gap-3">
-              <span className="h-px w-6 bg-[#00B383]" />
-              <span className="text-[11px] font-bold tracking-[.16em] text-[#00B383]">
-                01 // PILOT
-              </span>
-            </div>
-
-            <h1 className="max-w-[620px] text-balance text-[clamp(40px,6.4vw,84px)] font-medium leading-[.98] tracking-[-.04em]">
-              Digital infrastructure
-              <br />
-              <em className="not-italic text-[#39424C]">
-                for property operations.
-              </em>
-            </h1>
-
-            <p className="mt-7 max-w-md text-base leading-[1.6] text-[#39424C]">
-              One system connecting developers, managers, operators, and
-              residents — instead of six disconnected tools.
-            </p>
-
-            <div className="mt-9 flex items-center gap-5">
-              <a
-                href="#ecosystem"
-                className="group inline-flex items-center gap-2 rounded-full bg-[#0e1216] px-6 py-3 text-[11px] font-bold uppercase tracking-[.14em] text-[#F5F4F0] transition-colors hover:bg-[#00B383]"
-              >
-                Explore the ecosystem
-                <span className="transition-transform group-hover:translate-y-0.5">↓</span>
-              </a>
-            </div>
-          </div>
-
-          {/* Right: connection diagram — visualizes "one system, four roles" */}
-          <div className="relative mx-auto aspect-square w-full max-w-[420px] md:max-w-none">
-            <svg
-              viewBox="0 0 400 400"
-              className="h-full w-full"
-              aria-hidden="true"
-            >
-              <circle cx="200" cy="200" r="168" fill="none" stroke="#0e1216" strokeOpacity=".08" />
-              {[
-                [200, 46],
-                [354, 200],
-                [200, 354],
-                [46, 200],
-              ].map(([x, y], i) => (
-                <line
-                  key={i}
-                  x1="200"
-                  y1="200"
-                  x2={x}
-                  y2={y}
-                  stroke="#00B383"
-                  strokeOpacity=".35"
-                  strokeWidth="1"
-                />
-              ))}
-              {[
-                [200, 46],
-                [354, 200],
-                [200, 354],
-                [46, 200],
-              ].map(([x, y], i) => (
-                <circle key={i} cx={x} cy={y} r="5" fill="#00B383" />
-              ))}
-              <circle cx="200" cy="200" r="34" fill="#0e1216" />
-              <text
-                x="200"
-                y="204"
-                textAnchor="middle"
-                fontSize="11"
-                fontWeight="700"
-                letterSpacing=".04em"
-                fill="#F5F4F0"
-              >
-                PILOT
-              </text>
-            </svg>
-
-            {[
-              { label: "Developers", pos: "left-1/2 top-0 -translate-x-1/2 -translate-y-[calc(100%+8px)]" },
-              { label: "Managers", pos: "right-0 top-1/2 -translate-y-1/2 translate-x-[calc(100%+10px)]" },
-              { label: "Operators", pos: "left-1/2 bottom-0 -translate-x-1/2 translate-y-[calc(100%+8px)]" },
-              { label: "Residents", pos: "left-0 top-1/2 -translate-y-1/2 -translate-x-[calc(100%+10px)]" },
-            ].map(({ label, pos }) => (
+    {/* Marquee strip — the four roles in constant motion, bottom edge */}
+    <div className="relative z-[1] mt-10 overflow-hidden border-t border-white/10 py-5">
+      <div className="flex w-max animate-[pilot-marquee_22s_linear_infinite] items-center gap-10 whitespace-nowrap">
+        {Array.from({ length: 2 }).map((_, rep) => (
+          <div key={rep} className="flex items-center gap-10">
+            {["Developers", "Managers", "Operators", "Residents"].map((role) => (
               <span
-                key={label}
-                className={`absolute ${pos} whitespace-nowrap text-[10px] font-bold uppercase tracking-[.1em] text-[#39424C]`}
+                key={role}
+                className="flex items-center gap-10 text-[13px] font-bold uppercase tracking-[.16em] text-[#8E98A3]"
               >
-                {label}
+                {role}
+                <span className="h-1 w-1 rounded-full bg-[#00B383]" />
               </span>
             ))}
           </div>
-        </div>
+        ))}
+      </div>
+    </div>
+  </div>
 
-        <div className="relative z-[1] flex items-center justify-between gap-4 text-[8px] uppercase tracking-[.14em] text-[#8E98A3] md:text-[10px]">
-          <span className="h-px w-full bg-[#00B383]/30" />
-          <span className="shrink-0">Scroll to operate better</span>
-          <span className="h-px w-full bg-[#00B383]/30" />
-        </div>
-      </section>
+  <style>{`
+    @keyframes pilot-marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+  `}</style>
+</section>
       <section
         id="about"
         className="bg-[#0E1216] py-24 text-[#F5F4F0] md:py-36"

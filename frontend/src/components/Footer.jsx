@@ -1,4 +1,5 @@
 import Logo from "./Logo.jsx";
+import logo from "../assets/logo.png";
 
 // Placeholder profile URLs — replace with the real Pilot social links.
 const SOCIAL_LINKS = [
@@ -48,8 +49,8 @@ export default function Footer({ t }) {
       <div className="wrap">
         <div className="foot-top">
           <div className="foot-brand">
-            <Logo size={22} />
-            <b>Pilot</b>
+            <img className="logo" src={logo} alt="pilot" />
+
           </div>
           <div className="foot-tag">{t.footer.tag}</div>
           <div className="social-row">

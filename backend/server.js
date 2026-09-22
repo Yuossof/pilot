@@ -68,16 +68,16 @@ function buildTransport() {
 }
 
 const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST || "127.0.0.1",
-  port: Number(process.env.SMTP_PORT) || 25,
-  secure: process.env.SMTP_SECURE === "true",
+  host: process.env.SMTP_HOST || "vps140608.inmotionhosting.com",
+  port: Number(process.env.SMTP_PORT) || 587,
+  secure: process.env.SMTP_SECURE === "true", 
   auth: {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS,
   },
   tls: {
-    rejectUnauthorized: false
-  }
+    rejectUnauthorized: false,
+  },
 });
 
 /**

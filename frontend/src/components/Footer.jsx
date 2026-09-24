@@ -55,7 +55,14 @@ export default function Footer({ t }) {
           <div className="foot-tag">{t.footer.tag}</div>
           <div className="social-row">
             {SOCIAL_LINKS.map((s) => (
-              <a key={s.label} href={s.href} aria-label={s.label} title={s.label}>
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={s.label}
+                title={s.label}
+              >
                 {s.icon}
               </a>
             ))}

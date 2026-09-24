@@ -434,7 +434,25 @@ export default function Page() {
         >
           <span>© Pilot</span>
           <span>Property Operations Technology Company</span>
-          <span>07 / 07</span>
+          <div className="flex gap-5">
+            <a
+              href="https://www.facebook.com/PilotEstate"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Facebook
+            </a>
+            <a
+              href="https://www.instagram.com/pilotestate/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
+            {/* <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+              LinkedIn
+            </a> */}
+          </div>
         </div>
       </footer>
     </main >
